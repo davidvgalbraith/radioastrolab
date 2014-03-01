@@ -1,24 +1,14 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/TeX Live for SUSE Linux) (format=pdflatex 2013.7.6)  28 FEB 2014 22:44
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.20)  1 MAR 2014 17:23
 entering extended mode
- restricted \write18 enabled.
  %&-line parsing enabled.
 **lab2.tex
 (./lab2.tex
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
-rman-x-2011-07-01, ngerman-x-2011-07-01, afrikaans, ancientgreek, ibycus, arabi
-c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
-h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
-h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
-ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
-rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
-kurmanji, lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nyn
-orsk, polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbia
-nc, slovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorb
-ian, welsh, loaded.
-(/usr/share/texmf/tex/latex/base/article.cls
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texmf/tex/latex/base/size11.clo
+(/usr/share/texmf-texlive/tex/latex/base/size11.clo
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -33,66 +23,59 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texmf/tex/latex/oberdiek/bmpsize.sty
-Package: bmpsize 2009/09/04 v1.6 Extract size/resolution from bitmap files (HO)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/bmpsize.sty
+Package: bmpsize 2009/09/04 v1.6 Extract size and resolution data from bitmap f
+iles (HO)
 
-
-(/usr/share/texmf/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
 )
-Package bmpsize Info: Superseded by pdfTeX in PDF mode on input line 41.
+Package bmpsize Info: Superseded by pdfTeX in PDF mode on input line 35.
 )
-(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf/tex/latex/graphics/keyval.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texmf/tex/latex/graphics/graphics.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf/tex/latex/graphics/trig.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texmf/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texmf/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-(/usr/share/texmf/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-(/usr/share/texmf/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 \Gread@gobject=\count87
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/share/texmf/tex/latex/amsmath/amsmath.sty
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texmf/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/share/texmf/tex/latex/amsmath/amsgen.sty
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks15
 \ex@=\dimen105
 ))
-(/usr/share/texmf/tex/latex/amsmath/amsbsy.sty
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen106
 )
-(/usr/share/texmf/tex/latex/amsmath/amsopn.sty
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count88
@@ -133,18 +116,18 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-(/usr/share/texmf/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2009/06/22 v3.00
 
-(/usr/share/texmf/tex/latex/amsfonts/amsfonts.sty
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
-(/usr/share/texmf/tex/latex/amscls/amsthm.sty
-Package: amsthm 2009/07/02 v2.20.1
+(/usr/share/texmf-texlive/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks20
 \thm@bodyfont=\toks21
 \thm@headfont=\toks22
@@ -155,7 +138,7 @@ Package: amsthm 2009/07/02 v2.20.1
 \thm@headsep=\skip48
 \dth@everypar=\toks25
 )
-(/usr/share/texmf/tex/latex/fancyhdr/fancyhdr.sty
+(/usr/share/texmf-texlive/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip49
 \f@ncyO@elh=\skip50
 \f@ncyO@erh=\skip51
@@ -166,15 +149,12 @@ Package: amsthm 2009/07/02 v2.20.1
 \f@ncyO@olf=\skip56
 \f@ncyO@orf=\skip57
 )
-(/usr/share/texmf/tex/latex/geometry/geometry.sty
-Package: geometry 2010/09/12 v5.6 Page Geometry
+(/usr/share/texmf-texlive/tex/latex/geometry/geometry.sty
+Package: geometry 2008/12/21 v4.2 Page Geometry
 
-(/usr/share/texmf/tex/generic/oberdiek/ifvtex.sty
-Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
 Package ifvtex Info: VTeX not detected.
-)
-(/usr/share/texmf/tex/generic/ifxetex/ifxetex.sty
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count100
 \Gm@cntv=\count101
@@ -183,12 +163,9 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@wd@mp=\dimen115
 \Gm@odd@mp=\dimen116
 \Gm@even@mp=\dimen117
-\Gm@layoutwidth=\dimen118
-\Gm@layoutheight=\dimen119
-\Gm@layouthoffset=\dimen120
-\Gm@layoutvoffset=\dimen121
 \Gm@dimlist=\toks26
-) (./lab2.aux)
+
+(/usr/share/texmf-texlive/tex/xelatex/xetexconfig/geometry.cfg)) (./lab2.aux)
 \openout1 = `lab2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -204,104 +181,67 @@ LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 
-(/usr/share/texmf/tex/context/base/supp-pdf.mkii
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count103
-\scratchdimen=\dimen122
+\scratchdimen=\dimen118
 \scratchbox=\box28
 \nofMPsegments=\count104
 \nofMParguments=\count105
 \everyMPshowfont=\toks27
 \MPscratchCnt=\count106
-\MPscratchDim=\dimen123
+\MPscratchDim=\dimen119
 \MPnumerator=\count107
-\makeMPintoPDFobject=\count108
 \everyMPtoPDFconversion=\toks28
-) (/usr/share/texmf/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
+*geometry auto-detecting driver*
+*geometry detected driver: pdftex*
+-------------------- Geometry parameters
+paper: class default
+landscape: --
+twocolumn: --
+twoside: --
+asymmetric: --
+h-parts: 71.13188pt, 472.03123pt, 71.13188pt
+v-parts: 71.13188pt, 652.70622pt, 71.13188pt
+hmarginratio: --
+vmarginratio: --
+lines: --
+heightrounded: --
+bindingoffset: 0.0pt
+truedimen: --
+includehead: --
+includefoot: --
+includemp: --
+driver: pdftex
+-------------------- Page layout dimensions and switches
+\paperwidth  614.295pt
+\paperheight 794.96999pt
+\textwidth  472.03123pt
+\textheight 652.70622pt
+\oddsidemargin  -1.1381pt
+\evensidemargin -1.1381pt
+\topmargin  -38.1381pt
+\headheight 12.0pt
+\headsep    25.0pt
+\footskip   30.0pt
+\marginparwidth 59.0pt
+\marginparsep   10.0pt
+\columnsep  10.0pt
+\skip\footins  10.0pt plus 4.0pt minus 2.0pt
+\hoffset 0.0pt
+\voffset 0.0pt
+\mag 1000
 
-(/usr/share/texmf/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/share/texmf/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texmf/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/share/texmf/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/share/texmf/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/share/texmf/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/share/texmf/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texmf/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: <default>
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(71.13188pt, 472.03123pt, 71.13188pt)
-* v-part:(T,H,B)=(71.13188pt, 652.70622pt, 71.13188pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=472.03123pt
-* \textheight=652.70622pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-38.1381pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=11.0pt
-* \footskip=30.0pt
-* \marginparwidth=59.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
+(1in=72.27pt, 1cm=28.45pt)
+-----------------------
 LaTeX Font Info:    Try loading font information for U+msa on input line 22.
-(/usr/share/texmf/tex/latex/amsfonts/umsa.fd
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 22.
 
-(/usr/share/texmf/tex/latex/amsfonts/umsb.fd
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 Missing character: There is no Â in font cmr10!
@@ -407,40 +347,51 @@ Missing character: There is no   in font cmr10!
 Missing character: There is no Â in font cmr10!
 Missing character: There is no   in font cmr10!
 
-<pictures/pointonenyq.png, id=1, 1517.67pt x 867.9627pt>
-File: pictures/pointonenyq.png Graphic file (type png)
+Underfull \hbox (badness 10000) in paragraph at lines 51--57
 
-<use pictures/pointonenyq.png>
-Package pdftex.def Info: pictures/pointonenyq.png used on input line 94.
-(pdftex.def)             Requested size: 227.64067pt x 130.18878pt.
+ []
 
-<pictures/pointfournyq.png, id=3, 1517.67pt x 867.9627pt>
+<pictures/pointfournyq.png, id=1, 1517.67pt x 867.9627pt>
 File: pictures/pointfournyq.png Graphic file (type png)
 
 <use pictures/pointfournyq.png>
-Package pdftex.def Info: pictures/pointfournyq.png used on input line 95.
-(pdftex.def)             Requested size: 227.64067pt x 130.18878pt.
-
-<pictures/pointsevennyq.png, id=4, 1517.67pt x 867.9627pt>
+<pictures/pointsevennyq.png, id=3, 1517.67pt x 867.9627pt>
 File: pictures/pointsevennyq.png Graphic file (type png)
 
 <use pictures/pointsevennyq.png>
-Package pdftex.def Info: pictures/pointsevennyq.png used on input line 96.
-(pdftex.def)             Requested size: 227.64067pt x 130.18878pt.
+Overfull \hbox (59.16122pt too wide) in paragraph at lines 89--92
+ [][] 
+ []
 
-<pictures/onetimesnyq.png, id=5, 1517.67pt x 867.9627pt>
+
+Overfull \hbox (59.16122pt too wide) in paragraph at lines 89--92
+ [] 
+ []
+
+<pictures/onetimesnyq.png, id=4, 1517.67pt x 867.9627pt>
 File: pictures/onetimesnyq.png Graphic file (type png)
 
 <use pictures/onetimesnyq.png>
-Package pdftex.def Info: pictures/onetimesnyq.png used on input line 97.
-(pdftex.def)             Requested size: 227.64067pt x 130.18878pt.
-
-<pictures/triplenyq.png, id=6, 1517.67pt x 867.9627pt>
+<pictures/triplenyq.png, id=5, 1517.67pt x 867.9627pt>
 File: pictures/triplenyq.png Graphic file (type png)
 
 <use pictures/triplenyq.png>
-Package pdftex.def Info: pictures/triplenyq.png used on input line 98.
-(pdftex.def)             Requested size: 227.64067pt x 130.18878pt.
+Overfull \hbox (59.16122pt too wide) in paragraph at lines 96--99
+ [][] 
+ []
+
+
+Overfull \hbox (59.16122pt too wide) in paragraph at lines 96--99
+ [] 
+ []
+
+<pictures/signalninefive.png, id=6, 1175.1102pt x 641.0349pt>
+File: pictures/signalninefive.png Graphic file (type png)
+
+<use pictures/signalninefive.png>
+Overfull \hbox (56.76347pt too wide) in paragraph at lines 106--107
+[][] 
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -450,26 +401,43 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./pictures/pointonenyq
-.png> <./pictures/pointfournyq.png> <./pictures/pointsevennyq.png> <./pictures/
-onetimesnyq.png> <./pictures/triplenyq.png>] (./lab2.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./pictures/pointfourny
+q.png> <./pictures/pointsevennyq.png>] [3 <./pictures/onetimesnyq.png> <./pictu
+res/triplenyq.png>]
+<pictures/opointninefive.png, id=26, 1175.1102pt x 641.0349pt>
+File: pictures/opointninefive.png Graphic file (type png)
+
+<use pictures/opointninefive.png>
+<pictures/onepointofive.png, id=27, 1175.1102pt x 641.0349pt>
+File: pictures/onepointofive.png Graphic file (type png)
+
+<use pictures/onepointofive.png>
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+
+ []
+
+[4 <./pictures/signalninefive.png>] [5 <./pictures/opointninefive.png> <./pictu
+res/onepointofive.png>] (./lab2.aux) ) 
 Here is how much of TeX's memory you used:
- 3076 strings out of 493607
- 39968 string characters out of 3149946
- 105135 words of memory out of 3500000
- 6336 multiletter control sequences out of 15000+200000
- 10412 words of font info for 39 fonts, out of 3000000 for 9000
- 831 hyphenation exceptions out of 8191
- 38i,10n,43p,236b,239s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf/fo
-nts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/public/am
-sfonts/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb
-></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf/f
-onts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on lab2.pdf (2 pages, 1096234 bytes).
+ 2430 strings out of 495061
+ 30331 string characters out of 1182621
+ 86587 words of memory out of 3000000
+ 5587 multiletter control sequences out of 15000+50000
+ 11660 words of font info for 44 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 29i,10n,43p,1072b,265s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/pub
+lic/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
+hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-t
+exlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
+cm/cmsy8.pfb>
+Output written on lab2.pdf (5 pages, 1251686 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
- 22 compressed objects within 1 object stream
+ 69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

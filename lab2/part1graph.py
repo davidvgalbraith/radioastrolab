@@ -1,11 +1,11 @@
 #!/usr/bin/python
 
-import sys, getopt
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 
 def main(argv):
-   data = np.load('sampling1/lab_digital_sampling.npz')
+   data = np.load('nyquist/lab_digital_sampling.npz')
    d = {}
    d["0"] = 3.0
    d["1"] = 0.4
