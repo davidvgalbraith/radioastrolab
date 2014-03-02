@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.20)  1 MAR 2014 17:23
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.20)  1 MAR 2014 23:24
 entering extended mode
  %&-line parsing enabled.
 **lab2.tex
@@ -385,14 +385,6 @@ Overfull \hbox (59.16122pt too wide) in paragraph at lines 96--99
  [] 
  []
 
-<pictures/signalninefive.png, id=6, 1175.1102pt x 641.0349pt>
-File: pictures/signalninefive.png Graphic file (type png)
-
-<use pictures/signalninefive.png>
-Overfull \hbox (56.76347pt too wide) in paragraph at lines 106--107
-[][] 
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -404,40 +396,47 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./pictures/pointfourny
 q.png> <./pictures/pointsevennyq.png>] [3 <./pictures/onetimesnyq.png> <./pictu
 res/triplenyq.png>]
-<pictures/opointninefive.png, id=26, 1175.1102pt x 641.0349pt>
+<pictures/signalninefive.png, id=27, 1175.1102pt x 641.0349pt>
+File: pictures/signalninefive.png Graphic file (type png)
+
+<use pictures/signalninefive.png>
+Overfull \hbox (56.76347pt too wide) in paragraph at lines 106--107
+[][] 
+ []
+
+<pictures/opointninefive.png, id=28, 1175.1102pt x 641.0349pt>
 File: pictures/opointninefive.png Graphic file (type png)
 
 <use pictures/opointninefive.png>
-<pictures/onepointofive.png, id=27, 1175.1102pt x 641.0349pt>
+<pictures/onepointofive.png, id=29, 1175.1102pt x 641.0349pt>
 File: pictures/onepointofive.png Graphic file (type png)
 
 <use pictures/onepointofive.png>
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
-
- []
-
+<pictures/ifft.png, id=30, 1175.1102pt x 641.0349pt>
+File: pictures/ifft.png Graphic file (type png)
+ <use pictures/ifft.png>
 [4 <./pictures/signalninefive.png>] [5 <./pictures/opointninefive.png> <./pictu
-res/onepointofive.png>] (./lab2.aux) ) 
+res/onepointofive.png>] [6 <./pictures/ifft.png>] (./lab2.aux) ) 
 Here is how much of TeX's memory you used:
- 2430 strings out of 495061
- 30331 string characters out of 1182621
- 86587 words of memory out of 3000000
- 5587 multiletter control sequences out of 15000+50000
+ 2436 strings out of 495061
+ 30432 string characters out of 1182621
+ 87595 words of memory out of 3000000
+ 5592 multiletter control sequences out of 15000+50000
  11660 words of font info for 44 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 29i,10n,43p,1072b,265s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/pub
-lic/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
-s/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10
-.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
-hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-t
-exlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts
-/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
-cm/cmsy8.pfb>
-Output written on lab2.pdf (5 pages, 1251686 bytes).
+ 27i,10n,43p,1402b,240s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/
+fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr
+10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf
+-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on lab2.pdf (6 pages, 1341710 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 74 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

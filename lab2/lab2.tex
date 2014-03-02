@@ -55,7 +55,7 @@ finite number of times. The Nyquist criterion states that in order to
 get sample data that approximates the actual shape of the signal, one
 must sample at at least twice the frequency of the signal. \\
 
-Another piece of physics often relevant to digital radio is signal mixing. To mix signals, one uses a signal mixer. The mixer takes as input two signals and outputs their product in the time domain. This turns out to be their convolution in the frequency domain by the Convoolution Theorem. A mixer can be either Single Side Band (SSB) or Double Side Band (DSB). %TODO find out difference
+Another piece of physics often relevant to digital radio is signal mixing. To mix signals, one uses a signal mixer. The mixer takes as input two signals and outputs their product in the time domain. This turns out to be their convolution in the frequency domain by the Convoolution Theorem. A mixer can be either Single Side Band (SSB) or Double Side Band (DSB). A Double Sideband mixer outputs a wave given by the product of its two input waves. By the equation $\cos{a}\cos{b} = 1/2 * (\cos{(a - b)} + \cos{(a + b)})$, this output is equivalent to the sum of two waves whose frequencies are equal to the sum and difference of the frequencies of the input waves. A Single Sideband Mixer takes the additional step of filtering out one of these terms, so the output frequency is just one of $a - b$ or $a + b$. %TODO find out difference
 Digital shit is pretty sweet!! %TODO: Figure out what is sweet about it.
 
 
@@ -116,9 +116,15 @@ From the waveforms, we calculated the power spectrum using a Fourier transform: 
 \caption{Analog DSB convolution power spectra of 0.95 MHz and 1.0 MHz (top), and 1.05 MHz and 1.0 MHz (bottom). \label{adsb}}
 \end{figure}
 
- As you can see, the power amplitude coefficients strongly peak around 2 MHz, because that is roughly the sum of the frequencies we mixed. Looking closely, one can see that the highest peak of the mixture of 0.95 MHz and 1.0 MHz is at slightly less than 2 MHz, while the highest peak of the mixture of 1.05 and 1.0 MHz is slightly greater than 2 MHz, as expected. In addition, you can see the ``lower sideband'', the small collection of non-negligible frequencies centered around 0, and the ``upper sideband'', the small collection of non-negligible frequencies centered around 4. These frequencies appear as artifacts of the mixing process. In addition, the whole distribution is reproduced on the negative side of the x-axis, because actual waveforms are complex exponentials, so the sine wave we mixed with is actually represented by $\sin{x} = 1/2 * i * (e^{-ix} - e^{ix})$, so we ended up convolving our 1.0 MHz local oscillator with waves of frequency 0.95 and -0.95 MHz  in the first case, and 1.05 and -1.05 MHz in the second case. \\
+ As you can see, the power amplitude coefficients strongly peak around 2 MHz, because that is roughly the sum of the frequencies we mixed. Looking closely, one can see that the highest peak of the mixture of 0.95 MHz and 1.0 MHz is at slightly less than 2 MHz, while the highest peak of the mixture of 1.05 and 1.0 MHz is slightly greater than 2 MHz, as expected. These peaks form the ``upper sideband'', the part of the spectrum centered at the sum of the input frequencies. In addition, you can see the ``lower sideband'' in the vicinity of 0 MHz, where the frequency is the difference of the input frequencies. The DSB used in this lab seems to give lower sidebands that are smaller in magnitude than the upper sidebands, unless it was malfunctioning when we used it or we are inept. In addition, the whole distribution is reproduced on the negative side of the x-axis, because actual waveforms are complex exponentials, so the sine wave we mixed with is actually represented by $\sin{x} = 1/2 * i * (e^{-ix} - e^{ix})$, so we ended up convolving our 1.0 MHz local oscillator with waves of frequency 0.95 and -0.95 MHz  in the first case, and 1.05 and -1.05 MHz in the second case. Then, we filtered out the upper sideband of the convolved waveforms of Figure \ref{adsb} for the case of 0.95 MHz and found the IFFT of the lower sideband. The result appears in Figure \ref{ifft}. 
 
+\begin{figure}
+\centering
+\includegraphics[scale=0.35]{pictures/ifft}
+\caption{IFFT of lower sideband from convolved 0.95 and 1.0 MHz waves. \label{ifft}}
+\end{figure}
 
+The IFFT of the lower sideband is roughly a sinusoid with frequency 0.5 MHz. This makes sense because in the frequency domain it is sharply peaked about that frequency. The higher-order terms and noise errors contribute to small oscillations within the main 0.5 MHz oscillation. Finally, we made use of a digital mixer to explore DSB and SSB digital mixing. 
 %COMMENT:By placing your figures in the flow of your text, you can
 %increase the likelihood that they appear in reasonable places based on
 %where you reference them. Combining figures (2 & 3 were combined) that
