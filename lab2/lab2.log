@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.20)  3 MAR 2014 14:39
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.20)  3 MAR 2014 16:37
 entering extended mode
  %&-line parsing enabled.
 **lab2.tex
@@ -417,39 +417,56 @@ File: pictures/ifft.png Graphic file (type png)
  <use pictures/ifft.png>
 [4 <./pictures/signalninefive.png>] [5 <./pictures/opointninefive.png> <./pictu
 res/onepointofive.png>]
-<pictures/digitaloninefive.png, id=42, 1175.1102pt x 641.0349pt>
+<pictures/digitaloninefivewave.png, id=42, 1175.1102pt x 641.0349pt>
+File: pictures/digitaloninefivewave.png Graphic file (type png)
+
+<use pictures/digitaloninefivewave.png>
+<pictures/digitaloneofivewave.png, id=43, 1175.1102pt x 641.0349pt>
+File: pictures/digitaloneofivewave.png Graphic file (type png)
+
+<use pictures/digitaloneofivewave.png>
+<pictures/digitaloninefive.png, id=44, 1175.1102pt x 641.0349pt>
 File: pictures/digitaloninefive.png Graphic file (type png)
 
 <use pictures/digitaloninefive.png>
-<pictures/digitaloneofive.png, id=43, 1175.1102pt x 641.0349pt>
+<pictures/digitaloneofive.png, id=45, 1175.1102pt x 641.0349pt>
 File: pictures/digitaloneofive.png Graphic file (type png)
 
-<use pictures/digitaloneofive.png> [6 <./pictures/ifft.png>] [7 <./pictures/dig
-italoninefive.png> <./pictures/digitaloneofive.png>]
-<pictures/fir.png, id=54, 1175.1102pt x 641.0349pt>
+<use pictures/digitaloneofive.png>
+<pictures/ssbwave.png, id=46, 1175.1102pt x 641.0349pt>
+File: pictures/ssbwave.png Graphic file (type png)
+
+<use pictures/ssbwave.png>
+<pictures/ssbpower.png, id=47, 1175.1102pt x 641.0349pt>
+File: pictures/ssbpower.png Graphic file (type png)
+
+<use pictures/ssbpower.png> [6 <./pictures/ifft.png>] [7 <./pictures/digitaloni
+nefivewave.png> <./pictures/digitaloneofivewave.png>] [8 <./pictures/digitaloni
+nefive.png> <./pictures/digitaloneofive.png>] [9 <./pictures/ssbwave.png> <./pi
+ctures/ssbpower.png>] <pictures/fir.png, id=68, 1175.1102pt x 641.0349pt>
 File: pictures/fir.png Graphic file (type png)
- <use pictures/fir.png>
-[8 <./pictures/fir.png>] (./lab2.aux) ) 
+
+<use pictures/fir.png> [10 <./pictures/fir.png>] (./lab2.aux) ) 
 Here is how much of TeX's memory you used:
- 2454 strings out of 495061
- 30847 string characters out of 1182621
- 87619 words of memory out of 3000000
- 5607 multiletter control sequences out of 15000+50000
+ 2477 strings out of 495061
+ 31447 string characters out of 1182621
+ 88638 words of memory out of 3000000
+ 5626 multiletter control sequences out of 15000+50000
  11660 words of font info for 44 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 27i,10n,43p,1494b,240s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/pu
-blic/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-
-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/font
-s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
-/cm/cmsy8.pfb>
-Output written on lab2.pdf (8 pages, 1779935 bytes).
+ 27i,10n,43p,1479b,240s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
+onts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-
+texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fon
+ts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on lab2.pdf (10 pages, 2359418 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
+ 102 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

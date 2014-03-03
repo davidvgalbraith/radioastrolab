@@ -123,7 +123,14 @@ From the waveforms, we calculated the power spectrum using a Fourier transform: 
 \caption{IFFT of lower sideband from convolved 0.95 and 1.0 MHz waves. \label{ifft}}
 \end{figure}
 
-The IFFT of the lower sideband is roughly a sinusoid with frequency 0.5 MHz. This makes sense because in the frequency domain it is sharply peaked about that frequency. The higher-order terms and noise errors contribute to small oscillations within the main 0.5 MHz oscillation. Finally, we made use of a digital mixer to explore DSB and SSB digital mixing. First, we used the digital DSB mixer to mix the same signals we mixed with the analog mixer above, and we compared the results. The digitally-mixed power spectrum appears in Figure \ref{digpow}.
+The IFFT of the lower sideband is roughly a sinusoid with frequency 0.5 MHz. This makes sense because in the frequency domain it is sharply peaked about that frequency. The higher-order terms and noise errors contribute to small oscillations within the main 0.5 MHz oscillation. Finally, we made use of a digital mixer to explore DSB and SSB digital mixing. First, we used the digital DSB mixer to mix the same signals we mixed with the analog mixer above, and we compared the results. The digitally-mixed output waveform appears in Figure \ref{dwave}, while the digitally-mixed power spectrum appears in Figure \ref{digpow}.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.35]{pictures/digitaloninefivewave}
+\includegraphics[scale=0.35]{pictures/digitaloneofivewave}
+\caption{Output waveform for digitally mixed signals of 1 MHz and 0.95 MHz (top); 1 MHz and 1.05 MHz (bottom) \label{dwave}}
+\end{figure}
 
 \begin{figure}
 \centering
@@ -134,8 +141,15 @@ The IFFT of the lower sideband is roughly a sinusoid with frequency 0.5 MHz. Thi
 
 Even though we mixed the same signals in the digital DSB mixer as in the analog DSB mixer, the graphs look different because of differences between digital and analog mixers. There are two differences relevant to this discussion. First, the digital mixer has a sort of implicit input in the form of a DC offset, which it mixes with the input signals. Second, the digital mixer has a resolution given by $\nu_s / N$, where $\nu_s$ is the sampling frequency and $N$ is the number of samples. Since the ROACH gives 2048 samples at 200 MHz, its resolution is roughly $200000000/2000 = 100$kHz. Signals whose frequencies are closer together than this resolution will be indistinguishable to the digital mixer. The digital graphs show five separate peaks. The center peak, at a frequency of 0, corresponds to the DC offset. In addition, since the difference frequencies $|1 - 1.05|$ and $|1 - 0.95|$ are equal to $50$kHz, which is less than the resolution, their power amplitudes are added to this center peak as well. The next peak to the right, around 1 MHz, is the sum of the input frequencies with the DC offset, whose frequency is zero. The resulting output signal has the same frequency as the input signal. Finally, around 2 MHz, there appears a spike corresponding to the output signal whose frequency is the sum of the two input frequencies. For the same complex-exponential reasons as in the analog case, the whole spectrum is reproduced on the negative side of 0.
 
-Then, we used the SSB mixing functionality of our digital mixer to mix an input signal %TODO what input signal
-with a local oscillator. %TODO the rest of 2.2
+Then, we used the SSB mixing functionality of our digital mixer to mix an input signal at 1 MHz with a local oscillator at 1.56 MHz, specified by a low\_freq register of 2. The resulting waveform and power spectrum appear in Figure \ref{ssb}.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.35]{pictures/ssbwave}
+\includegraphics[scale=0.35]{pictures/ssbpower}
+\caption{Waveform and power spectrum for SSB-mixed signals of 1 MHz and 1.56 MHz. \label{ssb}}
+\end{figure}
+ %TODO the rest of 2.2
 
 \section{FIR Filter}
 
@@ -174,7 +188,7 @@ The actual effect of our FIR filter appears in Figure \ref{fir}. %TODO yaxis uni
 
 
 %COMMENT: Captions should go below figures always.
-
+\section{Conclusion}
 This was a fun lab report and I love radios and stuff! %TODO the rest of the lab
 
 %COMMENT: In a report you don't need to write out unit names, and it

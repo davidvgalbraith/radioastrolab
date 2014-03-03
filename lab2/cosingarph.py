@@ -8,17 +8,18 @@ def main(argv):
 
    sine = np.fromfile('cosin/sin_bram', dtype='>i4')
    cos = np.fromfile('cosin/cos_bram', dtype='>i4')
-
-   x = np.fft.fftfreq(len(sine))
-
-   plt.plot(x, abs(np.fft.fft(sine)), label="sine")
-   plt.plot(x, abs(np.fft.fft(cos)), label="cos")
+   comb = cos + 1j * sine
+   #x = np.fft.fftfreq(len(comb)) * 200000
+   x = np.arange(0, len(sine)) / 200.
+   #plt.plot(x, abs(np.fft.fft(comb)))
+   plt.plot(x, cos, label="Real part (cos)")
+   plt.plot(x, sine, label="Imaginary part (sin)")
 
    plt.tick_params(axis='both', which='major', labelsize=24)
    plt.legend()
-   plt.title("Crazy shit", fontsize=36)
-   plt.xlabel("Frequency (MHz)", fontsize=36)
-   plt.ylabel("Fourier Power Coefficient", fontsize=36)
+   plt.title("Waveform for SSB-combined 1 MHz and 1.56 MHz", fontsize=36)
+   plt.xlabel("Time (microseconds)", fontsize=36)
+   plt.ylabel("Voltage", fontsize=36)
 
    plt.show()
 
