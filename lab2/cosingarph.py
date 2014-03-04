@@ -14,12 +14,22 @@ def main(argv):
    #plt.plot(x, abs(np.fft.fft(comb)))
    plt.plot(x, cos, label="Real part (cos)")
    plt.plot(x, sine, label="Imaginary part (sin)")
-
+   ffted = np.fft.fft(comb)
+   ffted[len(ffted)/15:len(ffted)] = 0
+   ffted[0:len(ffted)/16]=0
+   ffted[len(ffted)/16:len(ffted)/15-2] = 0
+   ffted[len(ffted)/15-1] = 0
+   print abs(ffted[len(ffted)/16:len(ffted)/15])
+   inv = np.fft.ifft(ffted) * 50
+   plt.plot(x, inv, label="Desired sum frequency")
    plt.tick_params(axis='both', which='major', labelsize=24)
    plt.legend()
-   plt.title("Waveform for SSB-combined 1 MHz and 1.56 MHz", fontsize=36)
+   plt.title("Waveform for SSB-mixed 10 MHz and 6.25 MHz", fontsize=36)
    plt.xlabel("Time (microseconds)", fontsize=36)
    plt.ylabel("Voltage", fontsize=36)
+   #plt.title("Power Spectrum for SSB-mixed 10 MHz and 6.25 MHz", fontsize=36)
+   #plt.xlabel("Frequency (kHz)", fontsize=36)
+   #plt.ylabel("Fourier power coefficient", fontsize=36)
 
    plt.show()
 

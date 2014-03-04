@@ -15,8 +15,8 @@ def main(argv):
    plt.tick_params(axis='both', which='major', labelsize=24)
    
    plt.title("Filter response", fontsize=36)
-   plt.xlabel("Input Frequency(Hz)", fontsize=36)
-   plt.ylabel("Filter output (I don't know the units)", fontsize=36)
+   plt.xlabel("Input Frequency(MHz)", fontsize=36)
+   plt.ylabel("Filter transfer V_out/V_in", fontsize=36)
    plt.show()
 if __name__ == "__main__":
    main(sys.argv[1:])

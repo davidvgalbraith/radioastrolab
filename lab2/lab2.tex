@@ -103,7 +103,7 @@ In the second week of the lab, we used analog and digital mixers to combine wave
 
 \begin{figure}
 \includegraphics[scale=0.45]{pictures/signalninefive}
-\caption{Convoluted signal of a 0.95 MHz wave and a 1.0 MHz wave \label{wavenine}}
+\caption{Convolved signal of a 0.95 MHz wave and a 1.0 MHz wave \label{wavenine}}
 \end{figure}
 
 From the waveforms, we calculated the power spectrum using a Fourier transform: the results appear in Figure \ref{adsb}.
@@ -115,15 +115,15 @@ From the waveforms, we calculated the power spectrum using a Fourier transform: 
 \caption{Analog DSB convolution power spectra of 0.95 MHz and 1.0 MHz (top), and 1.05 MHz and 1.0 MHz (bottom). \label{adsb}}
 \end{figure}
 
- As you can see, the power amplitude coefficients strongly peak around 2 MHz, because that is roughly the sum of the frequencies we mixed. Looking closely, one can see that the highest peak of the mixture of 0.95 MHz and 1.0 MHz is at slightly less than 2 MHz, while the highest peak of the mixture of 1.05 and 1.0 MHz is slightly greater than 2 MHz, as expected. These peaks form the ``upper sideband'', the part of the spectrum centered at the sum of the input frequencies. In addition, you can see the ``lower sideband'' in the vicinity of 0 MHz, where the frequency is the difference of the input frequencies. Because we inadvertantly used too much power, the lower sideband is lower than the upper sideband, and some extra coefficients appear at $\pm 4$. Disregard these features. In addition, the whole distribution is reproduced on the negative side of the x-axis, because actual waveforms are complex exponentials, so the sine wave we mixed with is actually represented by $\sin{x} = 1/2 * i * (e^{-ix} - e^{ix})$, so we ended up convolving our 1.0 MHz local oscillator with waves of frequency 0.95 and -0.95 MHz  in the first case, and 1.05 and -1.05 MHz in the second case. Then, we filtered out the upper sideband of the convolved waveforms of Figure \ref{adsb} for the case of 0.95 MHz and found the IFFT of the lower sideband. The result appears in Figure \ref{ifft}. 
+ As you can see, the power amplitude coefficients strongly peak around 2 MHz, because that is roughly the sum of the frequencies we mixed. Looking closely, one can see that the highest peak of the mixture of 0.95 MHz and 1.0 MHz is at slightly less than 2 MHz, while the highest peak of the mixture of 1.05 and 1.0 MHz is slightly greater than 2 MHz, as expected. These peaks form the ``upper sideband'', the part of the spectrum centered at the sum of the input frequencies. In addition, you can see the ``lower sideband'' in the vicinity of 0 MHz, where the frequency is the difference of the input frequencies. Because we inadvertantly used too much power, the lower sideband is lower than the upper sideband, and some extra coefficients appear at $\pm 4$ MHz. Disregard these features. In addition, the whole distribution is reproduced on the negative side of the x-axis, because actual waveforms are complex exponentials, so the sine wave we mixed with is actually represented by $\sin{x} = 1/2 * i * (e^{-ix} - e^{ix})$, so we ended up convolving our 1.0 MHz signal with waves of frequency 0.95 and -0.95 MHz  in the first case, and 1.05 and -1.05 MHz in the second case. Then, we applied a Fourier filter to the convolved waveforms of Figure \ref{adsb} for the case of 0.95 MHz, zeroing out everything except the term at 0.05 MHz. The result appears in Figure \ref{ifft}. 
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.35]{pictures/ifft}
-\caption{IFFT of lower sideband from convolved 0.95 and 1.0 MHz waves. \label{ifft}}
+\caption{IFFT of 0.05 MHz term from convolved 0.95 and 1.0 MHz waves. \label{ifft}}
 \end{figure}
 
-The IFFT of the lower sideband is roughly a sinusoid with frequency 0.5 MHz. This makes sense because in the frequency domain it is sharply peaked about that frequency. The higher-order terms and noise errors contribute to small oscillations within the main 0.5 MHz oscillation. Finally, we made use of a digital mixer to explore DSB and SSB digital mixing. First, we used the digital DSB mixer to mix the same signals we mixed with the analog mixer above, and we compared the results. The digitally-mixed output waveform appears in Figure \ref{dwave}, while the digitally-mixed power spectrum appears in Figure \ref{digpow}.
+The IFFT is roughly a sinusoid with frequency 0.05 MHz. This makes sense because it is approximately the IFFT of a delta-function spectrum centered at that frequency.  Finally, we made use of a digital mixer to explore DSB and SSB digital mixing. First, we used the digital DSB mixer to mix the same signals we mixed with the analog mixer above, and we compared the results. The digitally-mixed output waveform appears in Figure \ref{dwave}, while the digitally-mixed power spectrum appears in Figure \ref{digpow}.
 
 \begin{figure}
 \centering
@@ -139,17 +139,22 @@ The IFFT of the lower sideband is roughly a sinusoid with frequency 0.5 MHz. Thi
 \caption{Power spectra for digitally mixed signals of 1 MHz and 0.95 MHz (top); 1 MHz and 1.05 MHz (bottom) \label{digpow}}
 \end{figure}
 
-Even though we mixed the same signals in the digital DSB mixer as in the analog DSB mixer, the graphs look different because of differences between digital and analog mixers. There are two differences relevant to this discussion. First, the digital mixer has a sort of implicit input in the form of a DC offset, which it mixes with the input signals. Second, the digital mixer has a resolution given by $\nu_s / N$, where $\nu_s$ is the sampling frequency and $N$ is the number of samples. Since the ROACH gives 2048 samples at 200 MHz, its resolution is roughly $200000000/2000 = 100$kHz. Signals whose frequencies are closer together than this resolution will be indistinguishable to the digital mixer. The digital graphs show five separate peaks. The center peak, at a frequency of 0, corresponds to the DC offset. In addition, since the difference frequencies $|1 - 1.05|$ and $|1 - 0.95|$ are equal to $50$kHz, which is less than the resolution, their power amplitudes are added to this center peak as well. The next peak to the right, around 1 MHz, is the sum of the input frequencies with the DC offset, whose frequency is zero. The resulting output signal has the same frequency as the input signal. Finally, around 2 MHz, there appears a spike corresponding to the output signal whose frequency is the sum of the two input frequencies. For the same complex-exponential reasons as in the analog case, the whole spectrum is reproduced on the negative side of 0.
+Even though we mixed the same signals in the digital DSB mixer as in the analog DSB mixer, the graphs look different because of differences between digital and analog mixers. There are two primary differences relevant to this discussion. First, the digital mixer has a sort of implicit input in the form of a DC offset, which it mixes with the input signals. Second, the digital mixer has a resolution given by $\nu_s / N$, where $\nu_s$ is the sampling frequency and $N$ is the number of samples. Since the ROACH gives 2048 samples at 200 MHz, its resolution is roughly $200000000/2000 = 100$kHz. Signals whose frequencies are closer together than this resolution will be indistinguishable to the digital mixer. The digital graphs show five separate peaks. The center peak, at a frequency of 0, corresponds to the DC offset. In addition, since the difference frequencies $|1 - 1.05|$ and $|1 - 0.95|$ are equal to $50$kHz, which is less than the resolution, their power amplitudes are added to this center peak as well. The next peak to the right, around 1 MHz, is the sum of the input frequencies with the DC offset, whose frequency is zero. The resulting output signal has the same frequency as the input signal. Finally, around 2 MHz, there appears a spike corresponding to the output signal whose frequency is the sum of the two input frequencies. For the same complex-exponential reasons as in the analog case, the whole spectrum is reproduced on the negative side of 0.
 
-Then, we used the SSB mixing functionality of our digital mixer to mix an input signal at 1 MHz with a local oscillator at 1.56 MHz, specified by a low\_freq register of 2. The resulting waveform and power spectrum appear in Figure \ref{ssb}.
+Then, we used the SSB mixing functionality of our digital mixer to mix an input signal at 10 MHz with a local oscillator at 6.25 MHz, specified by a low\_freq register of 8. The resulting waveform and power spectrum appear in Figure \ref{ssb}.
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.35]{pictures/ssbwave}
 \includegraphics[scale=0.35]{pictures/ssbpower}
-\caption{Waveform and power spectrum for SSB-mixed signals of 1 MHz and 1.56 MHz. \label{ssb}}
+\caption{Waveform and power spectrum for SSB-mixed signals of 10 MHz and 6.25 MHz. \label{ssb}}
 \end{figure}
- %TODO the rest of 2.2
+
+The power spectrum shows three peaks. In the middle, there is a peak at 6.25 MHz. This is from the mixing of the DC offset with the local oscillator. On the right, there is a peak at 16.25 MHz. This is from the output wave whose frequency is the sum of the input frequencies, $6.25 + 10$. On the left, there is a peak at -4.75 MHz. This is from the output wave whose frequency is the difference of the two input frequencies, $6.25-10$. In the DSB filter, we would have seen two additional frequencies, one for $-(6.25 + 10)$ and one for $-(6.25 - 10)$; since we used an SSB, we multiplied by a single complex waveform instead of the sum of two, so these frequencies do not appear. In the plot of the waveform, the red line shows the Fourier-filtered version of the output signal, generated by setting all terms in the FFT of the time series to zero except the one corresponding to the 16.25 MHz frequency. It has a positive frequency, since $16.25 > 0$. 
+
+Analog and digital DSB and SSB mixers have lots of advantages and disadvantages. With an analog mixer, you are free of many of the restraints imposed by the digital mixer. For instance, the analog mixer does not suffer from the resolution issues that the digital mixer has: it can measure and output frequencies in a more or less continuous spectrum. Also, it does not have the DC offset that features in our discussions of the digital results: this can make the results easier to understand and interpret. However, digital mixers are good too because they do exact math on their inputs to calculate the outputs, instead of having to worry about the physics of a potentially messy mixing process. On the other hand, you do have to do an analog-to-digital conversion to use the digital mixer, which introduces errors including the resolution problem mentioned above, because you can't fully capture a continuous signal with a finite digital representation. Both of them are prone to sometimes breaking and giving weird outputs, as we experienced in this lab, although ultimately we got good data for everything. 
+
+DSB mixers are apparently cheaper and easier to manufacture than SSB mixers, because an SSB mixer basically has to perform two separate convolution operations every time in order to kill the undesired sideband. If you have an application where having the extra sideband does not distract you too much, or you have the wherewithal to filter it out, you can use the DSB without worrying. But if not, then you can use the SSB and get only the terms you want in your product expansion. 
 
 \section{FIR Filter}
 
@@ -171,6 +176,15 @@ Register & Coefficient & Binary representation \\
 \end{figure}
 
 %TODO desired ideal filter response, actual calculated filter response
+Ideally, we want our filter to allow frequencies in the vicinity of 0 and reject frequencies elsewhere. The filter implemented by our chosen coefficients rapidly attenuates input frequencies except in the vicinity of zero. This is illustrated in Figure \ref{firtheory}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.35]{pictures/firtheory}
+\caption{Ideal and theoretical actual responses of our FIR filter. \label{firtheory}}
+\end{figure}
+
+Our filter does not perfectly capture the aspects of the ideal filter. This is because we only had eight coefficients with which to implement it. With infinite coefficients, we could come arbitrarily close to the shape of the ideal filter by using a Taylor series, but with only eight coefficients the approximate sinc function was as good as we could make an approximation to its behavior. Also, the filtration device is presumably made of electrical components such as capacitors and inductors that don't immediately switch on and off their currents, but rather only attenuate them exponentially, so the mathematical ideal of a perfect filter cannot be actualized in physical reality. 
 
 The actual effect of our FIR filter appears in Figure \ref{fir}. %TODO yaxis units, what are the different lines, get all the data together in one plot
 
