@@ -1,0 +1,88 @@
+c% You should title the file with a .tex extension (hw1.tex, for example)
+\documentclass[11pt]{article}
+
+\usepackage{bmpsize}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage[margin=2.5cm]{geometry}
+\newcommand{\Ohm}{\Omega}
+\newcommand{\inv}{^{-1}}
+\renewcommand{\part}[1] {\vspace{.10in} {\bf (#1)}}
+
+
+\pagestyle{fancyplain}
+
+
+\begin{document}
+\title{Interferometry Lab}
+\author{David Galbraith}
+\maketitle
+%COMMENT: In Latex, using the maketitle function will perform all the formatting
+%you had set up in the code below in a standard fashion
+
+\normalsize
+\begin{abstract} 
+In this lab, we did stuff. Hooray! %TODO figure out stuff
+\end{abstract}
+%COMMENT: It is customary to use the abstract environment for the
+%abstract, and to not include a pagebreak after the abstract prior to
+%the introduction in a scientific paper
+
+
+\lhead{\fancyplain{}{\textbf{Lab 2}}}      % Note the different brackets!
+\rhead{\fancyplain{}{David Galbraith}}
+\medskip                        % Skip a "medium" amount of space
+                                % (latex determines medium is)
+                                % Also try: \bigskip, \littleskip
+
+\thispagestyle{plain}
+
+\section{Introduction}
+%COMMENT: Sections and subsections have their own format that will make
+%the divisions in what you wrote more clear, and will number themselves,
+%allowing you to focus more on content rather than order
+
+
+\section{Experiments, Observations, Analysis and Interpretation} 
+
+The first thing we had to do in order to observe the celestiaol bodies was to figure out when they would be visible. Given the right ascensions and declinations of the various objects, we used rotation matrices to calculate altitude and azimuth for various local sidereal times in Berkeley. When the calculated altitudes are positive, the object is visible, disregarding the view-blocking tendencies of the Berkeley hills and surrounding buildings. The code used to calculate the altitudes and azimuths apppears in rotation.py; the resulting LSTs of visibility appear in Table \ref{lsts}.
+
+\begin{figure}
+\centering
+\begin{tabular}{c|c}
+Celestial Object & LST interval of visibility (radians) \\
+W3 & [0, 2$\pi$] \\
+\end{tabular}
+\caption{When the objects are visible in LST radians. \label{lsts}}
+\end{figure}
+
+%COMMENT: Using \label{value} and \ref{value} will allow you to refer to
+%a specific figure without worrying about the order in which you have
+%them in your document. While this obviously matters somewhat in terms
+%of the logical flow of you paper, it's really helpful if you're moving
+%things around as you write your paper. I did this for the first figure,
+%but you can change the rest fairly easily. Additionally, \centering
+%will put the figure in the middle of the page when you scale it down to
+%a more reasonable size.
+
+\subsection{The Nyquist Frequency}
+
+%TODO desired ideal filter response, actual calculated filter response
+
+%COMMENT:By placing your figures in the flow of your text, you can
+%increase the likelihood that they appear in reasonable places based on
+%where you reference them. Combining figures (2 & 3 were combined) that
+%are related or demonstrate two aspects of one thing can also allow you
+%to use space in your paper more effectively.
+
+
+%COMMENT: Captions should go below figures always.
+\section{Conclusion}
+
+%COMMENT: In a report you don't need to write out unit names, and it
+%would actually be preferred you use things like $\mu$H versus mircoHenry
+
+\end{document}
