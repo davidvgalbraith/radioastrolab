@@ -24,7 +24,7 @@
 
 \normalsize
 \begin{abstract} 
-In this lab, we did stuff. Hooray! %TODO figure out stuff
+In this lab, we used an interferometer to make measurements of the radio-wave radiation from the sun, the moon, and 3C144, the Crab nebula. Using the data and some mathematical techniques, we made estimations of the angular diameter of the sun and moon and of the declinations of 3C144. We got  %TODO fill in approximinations
 \end{abstract}
 %COMMENT: It is customary to use the abstract environment for the
 %abstract, and to not include a pagebreak after the abstract prior to
@@ -105,7 +105,37 @@ Then, we looked at the sun. First we looked at it for an hour to make sure our s
 \caption{The top graph shows the signals we measured from the sun over the course of a day. The middle shows a zoomed-in version of this data. The bottom shows the Fourier transform of the top. \label{daysun}}
 \end{figure}
 
-The sun's signal comes through as a sinusoid, as we expect from the properties of the interferometer. Looking at the Fourier transform, one can see strong peaks a few thousand Hz past the DC offset in the center. As in the last lab, our Fourier distributions are symmetric about zero due to the complex exponential multiplication that the interferometer does. Using formula 11, we can calculate the expected range of fringe frequencies and compare it with our observed frequencies. Assuming $B_y = 10$m and $\lambda = 2.5$cm, we get $f_f = B_y / \lambda * 2\pi / (86400) = .03\cos{h_s}$ Hz, where $h_s$, the hour angle, varies between $-\pi/2$ and $\pi/2$ throughout the day, being 0 at the meridian. Thus, we can expect that we will see frequencies in the Fourier spectrum between 0 and $.03$ Hz, with the power increasing as we move towards .03, since the sun is strongest at the meridian. This is exactly what we see in the full-day data, and the hour-long data, which was taken around midday, just shows a strong peak around .03 Hz. 
+The sun's signal comes through as a sinusoid, as we expect from the properties of the interferometer. Looking at the Fourier transform, one can see strong peaks a few thousand Hz past the DC offset in the center. As in the last lab, our Fourier distributions are symmetric about zero due to the complex exponential multiplication that the interferometer does. Using formula 11, we can calculate the expected range of fringe frequencies and compare it with our observed frequencies. Assuming $B_y = 10$m and $\lambda = 2.5$cm, we get $f_f = B_y / \lambda * 2\pi / (86400) = .03\cos{h_s}$ Hz, where $h_s$, the hour angle, varies between $-\pi/2$ and $\pi/2$ throughout the day, being 0 at the meridian. Thus, we can expect that we will see frequencies in the Fourier spectrum between 0 and $.03$ Hz, with the power increasing as we move towards .03, since the sun is strongest at the meridian. This is exactly what we see in the full-day data, and the hour-long data, which was taken around midday, just shows a strong peak around .03 Hz. \\
+Then, we calculated the sun's diameter using the data. %TODO calculate sun's diameter.
+
+\subsection{The Moon}
+Then, we did all the exact same things on the moon, except we skipped the part with the hour measurements because we believed in our system already. The resulting signal and Fourier transform data appear in figure \ref{moon}.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.35]{garphs/moonvolt}
+\includegraphics[scale=0.35]{garphs/moonzoom}
+\includegraphics[scale=0.35]{garphs/moonfourier}
+\caption{The top graph shows the signals we measured from the moon over the course of several hours. The middle shows a zoomed-in version of this data. The bottom shows the Fourier transform of the top. \label{moon}}
+\end{figure}
+
+The moon radiates much more weakly than the sun, because it is a large hunk of cheese instead of a ball of fusing plasma, so its black body radiation is not as strong. Nevertheless, looking at the Fourier transform data, one can see unmistakable peaks in the range between 0 and 0.3 Hz, just where we would expect them to be. The fringe frequency range is the same as that for the sun because it is a property of the interferometer independent of the source. 
+
+%TODO measure radius
+
+\subsection{The Crab}
+
+Finally, we looked at the Crab nebula. The signal and Fourier transform appear in Figure \ref{crab}.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.35]{garphs/crabvolt}
+\includegraphics[scale=0.35]{garphs/crabzoom}
+\includegraphics[scale=0.35]{garphs/crabfourier}
+\caption{The top graph shows the signals we measured from the Crab nebula over several hours. The middle shows a zoomed-in version of this data. The bottom shows the Fourier transform of the top. \label{crab}}
+\end{figure}
+
+The Crab data appears similar to the moon data, having small but unmistakable peaks between 0 and 0.3 Hz, as we'd expect from such a far-off source. 
 
 %COMMENT: Using \label{value} and \ref{value} will allow you to refer to
 %a specific figure without worrying about the order in which you have
@@ -115,8 +145,6 @@ The sun's signal comes through as a sinusoid, as we expect from the properties o
 %but you can change the rest fairly easily. Additionally, \centering
 %will put the figure in the middle of the page when you scale it down to
 %a more reasonable size.
-
-%TODO desired ideal filter response, actual calculated filter response
 
 %COMMENT:By placing your figures in the flow of your text, you can
 %increase the likelihood that they appear in reasonable places based on
