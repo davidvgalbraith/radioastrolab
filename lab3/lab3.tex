@@ -135,7 +135,28 @@ Finally, we looked at the Crab nebula. The signal and Fourier transform appear i
 \caption{The top graph shows the signals we measured from the Crab nebula over several hours. The middle shows a zoomed-in version of this data. The bottom shows the Fourier transform of the top. \label{crab}}
 \end{figure}
 
-The Crab data appears similar to the moon data, having small but unmistakable peaks between 0 and 0.3 Hz, as we'd expect from such a far-off source. 
+The Crab data appears similar to the moon data, having small but unmistakable peaks between 0 and 0.3 Hz, as we'd expect from such a far-off source. Using this data, we estimated the length of the telescope baseline using brute force least-squares fitting. Assuming we had accurate values of the declination and right ascension, we made guesses at the proper value of the baseline to use in equation 9. Also, we tried to fit not the data that you see in Figure \ref{crab}, but rather a smoothed, filtered version of the data as seen in Figure \ref{crabsmooth}. Figure \ref{crabsmooth} shows the data in the top graph of Figure \ref{crab}, with a Fourier filter applied to cut out frequencies lower than 0.01 Hz or greater than 0.0203 Hz and a boxcar smooth applied to remove the envelope variation and center the data about 0. The 0.01 Hz value on the Fourier filter was chosen because that corresponds to a baseline length of around 6 meters, which is clearly too short; the .0203 corresponds to a a baseline length of around 12 meters, which is clearly too long. The boxcar smooth subtracted from each point of the original data the median of the ten measurements surrounding that point. A plot of the measured chi-square error versus the guessed values of baseline length appears in Figure \ref{crabchi}.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.35]{garphs/crabsmooth}
+\caption{ Error in fit of equation 9 as a function of guessed baseline length. \label{crabsmooth}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.35]{garphs/crabchi}
+\caption{ Error in fit of equation 9 as a function of guessed baseline length. \label{crabchi}}
+\end{figure}
+
+Clearly, our data fits best with a baseline length of around 9.1 meters. This is reasonably close to the canonical value of 10 meters, but it is not exactly there. This could have been due to noise in the data, problems with the interferometer (though our logs registered nothing), or problems with the fitting process, which seems more an art than a science. Also, the resulting fit is an abject failure, as depicted in Figure \ref{failure}. In any event, this value of the baseline yields values for $A$ and $B$ in equation 9 of -0.41 and 0.41, respectively. Using these values for $A$ and $B$, we find a cable length of $\cos\inv {A}  / (2 \pi\nu) = 2.65 * 10^{-2}$ nm. This cable length is shorter than anyone would think reasonable, surely because of the low quality of our fit. 
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.35]{garphs/failure}
+\includegraphics[scale=0.35]{garphs/failurezoom}
+\caption{ A least-squares fit to the filtered, smoothed data. The top shows the whole signal, and the bottom shows a zoom-in of the early part. \label{failure}}
+\end{figure}
 
 %COMMENT: Using \label{value} and \ref{value} will allow you to refer to
 %a specific figure without worrying about the order in which you have
