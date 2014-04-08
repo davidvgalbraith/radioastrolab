@@ -1,7 +1,6 @@
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
-import math 
 
 def matrify(data, power):
     n = data.size
@@ -12,8 +11,8 @@ def matrify(data, power):
 
 def matrificate(hours, guess):
     X = []
-    X.append([math.cos(2 * math.pi * guess * math.sin(x) * math.cos(.4) / .025) for x in hours]) 
-    X.append([-math.sin(2 * math.pi * guess * math.sin(x) * math.cos(.4) / .025) for x in hours])
+    X.append(np.cos(2 * np.pi * guess * np.sin(hours) * np.cos(.4) / .025))
+    X.append(-np.sin(2 * np.pi * guess * np.sin(hours) * np.cos(.4) / .025))
     return np.transpose(np.matrix(X));
 
 def polynomial(x, coeff):
@@ -41,22 +40,26 @@ def boxcar(raw):
     return smoothed
 
 def curvify(x, coeff, guess):
-    q = coeff[0, 0] * math.cos(2 * math.pi * guess * math.sin(x) * math.cos(.4) / .025) - coeff[1, 0] * math.sin(2 * math.pi * guess * math.sin(x) * math.cos(.4) / .025)
+    q = coeff[0, 0] * np.cos(2 * np.pi * guess * np.sin(x) * np.cos(.4) / .025) - coeff[1, 0] * np.sin(2 * np.pi * guess * np.sin(x) * np.cos(.4) / .025)
+    return q
+
+def curvificate(x, coeff, guess):
+    q = coeff[0] * np.cos(2 * np.pi * guess * np.sin(x) * np.cos(.4) / .025) - coeff[1] * np.sin(2 * np.pi * guess * np.sin(x) * np.cos(.4) / .025)
     return q
 #Brewt force least squares for baseline
 def main(argv):
     data = np.load("data/3C144_03-28-2014_001926.npz")
-    xvals = data["lst"][2000:8100]
+    xvals = data["lst"]
     xvals = xvals[5:len(xvals)-5]
     print xvals
-    hourangles = 2 * math.pi / 24 * (xvals - 5.6)
-    yvals = data["volts"][2000:8100]
-    plt.plot(yvals)
-    plt.show()
+    hourangles = 2 * np.pi / 24 * (xvals - 5.6)
+    yvals = data["volts"]
+  #  plt.plot(yvals)
+   # plt.show()
 
     yvals = (yvals[5:len(yvals) - 5] - boxcar(yvals)) * 1000000
-    plt.plot(yvals)
-    plt.show()
+ #   plt.plot(yvals)
+#    plt.show()
 
     ffted = np.fft.fft(yvals)
     freaks = np.fft.fftfreq(len(ffted))
@@ -64,14 +67,21 @@ def main(argv):
         if (abs(freaks[k]) > 0.0203 or abs(freaks[k]) < 0.01):
             ffted[k] = 0
     yvals = np.fft.ifft(ffted).real
-    plt.plot(yvals)
+    plt.plot(yvals, label="Measured data")
+    plt.xlabel("Time (sec)", fontsize=30)
+    plt.ylabel("Signal", fontsize=30)
+    plt.title("Filtered, smoothed Crab signal", fontsize = 36)
+    plt.plot(curvificate(hourangles, [-0.41, 0.41], 9.114), label="Fitted curve")
+    plt.legend()
     plt.show()
 
     print hourangles
     xgarphvals = []
     ygarphvals = []
-    delta = 0.001
-    for guess in np.arange(8, 11, delta):
+    minum = 9999999999999999999
+    dictum = {}
+    delta = 0.0001
+    for guess in np.arange(9.08, 9.14, delta):
         xgarphvals.append(guess)
         xmatrix = matrificate(hourangles, guess)
         xtrans = np.transpose(xmatrix)
@@ -83,13 +93,17 @@ def main(argv):
         residuals = abs(line - yvals)
         print max(residuals)
         cheese = chisquare(residuals)
+        if cheese < minum:
+            minum = cheese
+            dictum[cheese] = coeffab
         print guess, cheese
         ygarphvals.append(cheese)
     plt.plot(xgarphvals, ygarphvals)
+    print dictum[minum]
     #plt.plot(hourangles, yvals)
-    plt.xlabel("Guess of proper value for By/lambda * cos(delta)", fontsize=30)
+    plt.xlabel("Guess of proper value for Baseline (m)", fontsize=30)
     plt.ylabel("Chi-square error", fontsize=30)
-    plt.title("Error as a function of guessed C", fontsize = 36)
+    plt.title("Error as a function of guessed Baseline", fontsize = 36)
     plt.legend()
     plt.show()
 if __name__ == "__main__":
