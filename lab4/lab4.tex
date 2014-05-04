@@ -1,0 +1,60 @@
+\documentclass[11pt]{article}
+
+\usepackage{bmpsize}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage[margin=2.5cm]{geometry}
+\newcommand{\Ohm}{\Omega}
+\newcommand{\inv}{^{-1}}
+\renewcommand{\part}[1] {\vspace{.10in} {\bf (#1)}}
+
+
+\pagestyle{fancyplain}
+
+
+\begin{document}
+\title{Lab 4}
+\author{David Galbraith}
+\maketitle
+%COMMENT: In Latex, using the maketitle function will perform all the formatting
+%you had set up in the code below in a standard fashion
+
+\normalsize
+\begin{abstract} 
+In this lab, we used the Leuschner telescope to look at the Orion-Eridanus superbubble. It was pink! %TODO it was not pink
+
+\end{abstract}
+%COMMENT: It is customary to use the abstract environment for the
+%abstract, and to not include a pagebreak after the abstract prior to
+%the introduction in a scientific paper
+
+
+\lhead{\fancyplain{}{\textbf{Lab 4}}}      % Note the different brackets!
+\rhead{\fancyplain{}{David Galbraith}}
+\medskip                        % Skip a "medium" amount of space
+                                % (latex determines medium is)
+                                % Also try: \bigskip, \littleskip
+
+\thispagestyle{plain}
+
+\section{Introduction}
+%COMMENT: Sections and subsections have their own format that will make
+%the divisions in what you wrote more clear, and will number themselves,
+%allowing you to focus more on content rather than order
+There are a lot of things in the universe. From our vantage point on Earth, we want to figure out what these things are. Using telescopes, we try to figure it out. One of the things we look at is called the 21-cm line. This is the line corresponding to the hyperfine transition of hydrogen, which is when the spins of the proton and electron in a hydrogen atom flip between antiparallel and parallel. When this happens, the hydrogen emits a photon with a frequency of about 1420 MHz, which is a wavelength of about 21 cm. This transition is forbidden, so it happens only after about ten million years for any given hydrogen atom. Therefore, when we observe it, there must be a lot of hydrogen in the region from whence it is coming. Therefore, we can use the 21-cm line to find regions with a lot of hydrogen in them. In addition, the line can be broadened by Doppler broadening. This is when the motion of the atom relative to the observer causes the wavelength to appear different. This gives us information about the velocity dispersion of the hydrogen atoms in the place where we are looking. 
+The thing in the universe that we decided to look at this month is the Orion-Eridanus superbubble. A superbubble is a region of space with dimensions in the hundreds of light years that is filled with hot gas. This hot gas came from one or more stars, either from stellar winds or from a supernova. We live in a bubble called the Local Bubble. About eight hundred kiloparsecs away, over by Orion and Eridanus, there is another bubble: the Orion-Eridanus superbubble. Carl Heiles helped discover it in the 1990s. This bubble takes up the region in the galactic plane from galactic latitude 160-220 degrees and galactic longitude -70 to -10 degrees. This is what we looked at.  
+
+\section{Experiments, Observations, Analysis and Interpretation} 
+To look at the superbubble, we used the telescope named Leuschner. We told Leuschner to look at the region where the bubble is. To do this, we divided the part of the galactic plane from 160-220 latitude and -70 to -10 longitude into rectangular segments. All of the longitude spacings were 2 degrees, but since the galaxy is curved we only had to space the latitudes 2 / cos($b$) degrees, where $b$ is the longitude. Also, to save time, when we had swept from latitude 160 to 220 for a given longitude, we increased the longitude and swept back from 220 to 160 latitude. This saved much tracking time. We picked 2 degrees because that gives two samples per half power beam width. This is important to fulfill the Nyquist Criterion so that we get an accurate image. 
+\subsection{Calculating When Objects of Interest are Overhead}
+
+\section{Conclusion}
+In conclusion, this was a really cool lab. 
+%COMMENT: In a report you don't need to write out unit names, and it
+%would actually be preferred you use things like $\mu$H versus mircoHenry
+\section{Acknowledgements}
+My partners were Kyle, Leonardo, and Eduardo. We made a super awesome team!
+\end{document}
