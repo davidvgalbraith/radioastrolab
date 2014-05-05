@@ -47,9 +47,65 @@ In this lab, we used the Leuschner telescope to look at the Orion-Eridanus super
 There are a lot of things in the universe. From our vantage point on Earth, we want to figure out what these things are. Using telescopes, we try to figure it out. One of the things we look at is called the 21-cm line. This is the line corresponding to the hyperfine transition of hydrogen, which is when the spins of the proton and electron in a hydrogen atom flip between antiparallel and parallel. When this happens, the hydrogen emits a photon with a frequency of about 1420 MHz, which is a wavelength of about 21 cm. This transition is forbidden, so it happens only after about ten million years for any given hydrogen atom. Therefore, when we observe it, there must be a lot of hydrogen in the region from whence it is coming. Therefore, we can use the 21-cm line to find regions with a lot of hydrogen in them. In addition, the line can be broadened by Doppler broadening. This is when the motion of the atom relative to the observer causes the wavelength to appear different. This gives us information about the velocity dispersion of the hydrogen atoms in the place where we are looking. 
 The thing in the universe that we decided to look at this month is the Orion-Eridanus superbubble. A superbubble is a region of space with dimensions in the hundreds of light years that is filled with hot gas. This hot gas came from one or more stars, either from stellar winds or from a supernova. We live in a bubble called the Local Bubble. About eight hundred kiloparsecs away, over by Orion and Eridanus, there is another bubble: the Orion-Eridanus superbubble. Carl Heiles helped discover it in the 1990s. This bubble takes up the region in the galactic plane from galactic latitude 160-220 degrees and galactic longitude -70 to -10 degrees. This is what we looked at.  
 
-\section{Experiments, Observations, Analysis and Interpretation} 
+\section{Experiments, Observations, Analysis and Interpretation}
+\subsection{Taking and Calibrating Data}
 To look at the superbubble, we used the telescope named Leuschner. We told Leuschner to look at the region where the bubble is. To do this, we divided the part of the galactic plane from 160-220 latitude and -70 to -10 longitude into rectangular segments. All of the longitude spacings were 2 degrees, but since the galaxy is curved we only had to space the latitudes 2 / cos($b$) degrees, where $b$ is the longitude. Also, to save time, when we had swept from latitude 160 to 220 for a given longitude, we increased the longitude and swept back from 220 to 160 latitude. This saved much tracking time. We picked 2 degrees because that gives two samples per half power beam width. This is important to fulfill the Nyquist Criterion so that we get an accurate image. 
-\subsection{Calculating When Objects of Interest are Overhead}
+We took four different measurements using the telescope in order to picture the bubble. To isolate the signal of the H1 line, we needed to subtract out the bandpass of our system. To do this, we took one measurement of our signal and one measurement that just consisted of feeding random noise into the system. By subtracting the noise measurement from the signal measurement, what was left over was the signal we are interested in. Except immediately in the vicinity of the H1 line, the spike from that line obscures the underlying shape, so we had to take a shifted measurement as well. The shifted measurement was not centered at the H1 frequency, so we can clearly see the underlying shape there. When we did this shift, it mysteriously changed the gain of the whole system, so we needed to take a measurement of noise in the shifted system as well. We used integration times of ten seconds for the noisee measurements, and we used integration times of a minute for the spectrum measurements. We picked these numbers because the longer integration time (one minute) will give the noise a lot of time to cancel out in the spectrum measurements. In the noise measurements, we want to see noise, so we only used ten seconds so it did not cancel. A graph of all these measurements for a certain point in space appears in Figure \ref{spectra}.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.35]{garphs/all}
+\caption{This graph displays all four measurements taken with the telescope at a representative galactic coordinate. The blue line shows what we measured when looking at the superbubble. The red line shows the noise corresponding to this measurement. The green line gives the shifted data, and the cyan line is the shifted noise. Note that the power drops to zero outside approximately (1416, 1428) MHz; this is the range in which we told the telescope to measure, because that is where we are likely to see the 21cm line. \label{spectra}}
+\end{figure} 
+
+Using the ``Cool Method'' of calibration , we found the shape of the 21cm line. However, it was still a bit offset from zero and had some filter shape left over, so we also fit a polynomial average to it and subtracted that. The final picture of a representative line appears in Figure \ref{21cm}.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.35]{garphs/specint}
+\caption{This graph clearly shows the emission line at 21cm (1420 MHz). It clearly stands up above the noise background. Note the offset of 1418 MHz in the x-axis.\label{21cm}}
+\end{figure} 
+
+\subsection{Pictures of the Bubble}
+Using these methods, we measured the 21cm emission lines from the bubble at 326 different $(l, b)$ galactic coordinate pairs. These individual points appear in Figure \ref{points}.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.35]{garphs/points}
+\caption{This graph shows the points at which we made measurements of the Orion-Eridans superbubble's 21-cm radio emission. In a perfect world, these would form a grid of squares approximately 4 square degrees in size all throughout the area on the sky where the bubble can be found, which would take around 700 measurements. \label{points}}
+\end{figure} 
+
+By plotting the strengths of the transmission lines from these points, we can make a plot of the equivalent black-body temperature for the observed radiation. We fill in the area between the points we observed at using Gaussian FFT convolution. This plot appears in Figure \ref{blackbody}.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.35]{garphs/blackbody}
+\caption{This graph maps the blackbody temperature of the Orion-Eridanus superbubble as a function of latitude and longitude. We smoothed using a Gaussian centered in the center of the screen with standard deviation 3.1 degrees. \label{blackbody}}
+\end{figure} 
+
+Using the equations towards the end of the lab manual, we are able to make a map of the mass of hydrogen seen by the telescope at each point in the bubble. This graph appears in Figure \ref{hydrogen}.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.35]{garphs/hydrogen}
+\caption{This graph maps the hydrogen density of the Orion-Eridanus superbubble as a function of latitude and longitude. We smoothed using a Gaussian centered in the center of the screen with standard deviation 3.1 degrees. We approximated the distance to the bubble as 400 parsecs and used a beam width $\Omega_b$ of 4 degrees.\label{hydrogen}}
+\end{figure} 
+
+Finally, we used the formula $v = -\Delta\nu / 4.73$ km/s to make a plot of the velocity of the parts of the superbubble. This appears in Figure \ref{velocity}. 
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.35]{garphs/velocity}
+\caption{This graph maps the velocities of areas of the Orion-Eridanus superbubble as a function of latitude and longitude. We smoothed using a Gaussian centered in the center of the screen with standard deviation 3.1 degrees. Redder regions are moving faster in our direction. \label{blackbody}}
+\end{figure} 
+
+The velocity dispersion of the observable parts of the bubble is predominantly in our direction; this is because the bubble is expanding, so the parts we see are getting closer to us, even though the universe is expanding. We can compare the figures generated by our plots to a reference image of the bubble published in ``The Orion OB1 Association'', an article by AGA Brown, D Hartmann, and WB Burton in the 1995 issue of the journal Astronomy and Astrophysics. This appears in Figure \ref{canon}.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.35]{garphs/superbubble}
+\caption{This is what the superbubble looks like with a better telescope, longer integration time, and/or more pointings.  \label{canon}}
+\end{figure} 
 
 \section{Conclusion}
 In conclusion, this was a really cool lab. 
